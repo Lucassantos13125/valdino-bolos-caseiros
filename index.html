@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valdino Bolos Caseiros</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Valdino Bolos Caseiros — sabor de tradição. Peça pelo WhatsApp!" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Valdino Bolos Caseiros — logo" class="logo" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="btn btn-ghost whatsapp" id="cta-whats">Pedir pelo WhatsApp</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Valdino Bolos Caseiros</h1>
+          <p class="lead">Sabor que abraça — bolos caseiros feitos com carinho e receita da casa.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" id="hero-whats">Peça pelo WhatsApp</a>
+            <a class="btn btn-outline" href="cardapio.html">Ver Cardápio</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/placeholder-hero.jpg" alt="Bolo caseiro delicioso" />
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase container">
+      <h2>Nossos Destaques</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="images/bolo1.jpg" alt="Bolo Fazenda" />
+          <div class="card-body">
+            <h3>Bolo Tradicional</h3>
+            <p>Receita clássica, textura macia.</p>
+            <div class="card-meta">R$ 25,00</div>
+            <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20Tradicional">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/bolo2.jpg" alt="Bolo de festa" />
+          <div class="card-body">
+            <h3>Bolo de Festa</h3>
+            <p>Personalizado para seu evento.</p>
+            <div class="card-meta">A partir de R$ 120,00</div>
+            <button class="btn btn-small btn-whatsapp" data-msg="Quero%20saber%20sobre%20um%20Bolo%20de%20Festa">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/bolo3.jpg" alt="Bolo gelado" />
+          <div class="card-body">
+            <h3>Bolo Gelado</h3>
+            <p>Refrescante e cremoso.</p>
+            <div class="card-meta">R$ 30,00</div>
+            <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20Gelado">Pedir</button>
+          </div>
+        </article>
+      </div>
+      <div class="more-link">
+        <a class="btn btn-outline" href="cardapio.html">Ver mais bolos</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="about container">
+      <h2>Sobre a Valdino</h2>
+      <p>Há anos a Valdino Bolos Caseiros leva tradição, ingredientes de qualidade e aquele toque de família ao seu pedaço de bolo. Produzido artesanalmente e com muito carinho.</p>
+    </section>
+
+    <section id="contato" class="contact container">
+      <h2>Contato</h2>
+      <p>Peça rápido pelo WhatsApp ou deixe uma mensagem.</p>
+      <div class="contact-row">
+        <a class="btn btn-primary" id="contact-whats">Falar no WhatsApp</a>
+        <div class="contact-info">
+          <p><strong>Telefone/WhatsApp:</strong> (11) 96156-1266</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Valdino Bolos Caseiros — Feito com carinho.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

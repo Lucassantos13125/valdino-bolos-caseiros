@@ -1,0 +1,63 @@
+:root{
+  --green: #2e8b57; /* tom principal — ajusta se quiser */
+  --white: #ffffff;
+  --bg: #f7f9f7;
+  --muted: #666;
+  --max-width: 1100px;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(30,30,30,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:#0b0b0b}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+.site-header{background:var(--white);border-bottom:1px solid #eee}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.logo{height:56px}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:inherit;text-decoration:none;font-weight:600}
+.hamburger{display:none;background:none;border:0;font-size:28px}
+
+.btn{border:0;padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:700}
+.btn-primary{background:var(--green);color:var(--white)}
+.btn-outline{background:transparent;border:2px solid var(--green);color:var(--green)}
+.btn-ghost{background:transparent;color:var(--green)}
+.btn-small{padding:8px 12px;font-size:14px;border-radius:8px}
+.whatsapp{background:#25D366;color:#fff;border-radius:10px}
+
+.hero{padding:40px 0}
+.hero-inner{display:flex;gap:24px;align-items:center;justify-content:space-between}
+.hero-text h1{font-size:36px;margin:0;color:var(--green)}
+.lead{color:var(--muted);margin-top:8px}
+.hero-image img{max-width:520px;border-radius:16px;box-shadow:var(--shadow);width:100%;height:auto}
+
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:12px}
+.card-meta{margin-top:8px;font-weight:800;color:var(--green)}
+
+.showcase{margin-top:20px}
+.more-link{text-align:center;margin-top:12px}
+
+.about, .contact{margin-top:36px;padding:18px;background:var(--white);border-radius:12px;box-shadow:var(--shadow)}
+
+.site-footer{margin-top:30px;padding:20px 0;text-align:center;color:var(--muted)}
+
+@media (max-width:900px){
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .hero-inner{flex-direction:column-reverse}
+  .hero-image img{max-width:100%}
+  .nav{display:none}
+  .hamburger{display:block}
+}
+
+@media (max-width:600px){
+  .grid-3{grid-template-columns:1fr}
+  .logo{height:46px}
+  .hero-text h1{font-size:28px}
+}
