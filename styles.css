@@ -1,8 +1,8 @@
 :root{
   --green: #2e8b57; /* tom principal — ajusta se quiser */
-  --white: #92e783;
-  --bg:    #f7f9f7;
-  --muted: #666;
+  --white: #ffffff;
+  --bg:    #9de79d;
+  --muted: #666666;
   --max-width: 1100px;
   --radius: 12px;
   --shadow: 0 6px 18px rgba(30,30,30,0.06);
