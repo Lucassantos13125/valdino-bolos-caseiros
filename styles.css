@@ -48,6 +48,21 @@ html,body{margin:0;padding:0;background:var(--bg);color:#0b0b0b}
 
 .site-footer{margin-top:30px;padding:20px 0;text-align:center;color:var(--muted)}
 
+.remover-item {
+  margin-left: 8px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.remover-item:hover {
+  background-color: #2e8b57;
+}
+
+
 @media (max-width:900px){
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .hero-inner{flex-direction:column-reverse}

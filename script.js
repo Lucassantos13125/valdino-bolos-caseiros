@@ -38,4 +38,63 @@ document.addEventListener("DOMContentLoaded", () => {
   // atualiza anos no footer
   const yearEls = [document.getElementById("year"), document.getElementById("year2"), document.getElementById("year3")];
   yearEls.forEach(el => { if(el) el.textContent = new Date().getFullYear(); });
+
+  // ---- LÓGICA DO CARRINHO COM PREÇOS ----
+const cart = [];
+const listaCarrinho = document.getElementById("lista-carrinho");
+const btnFinalizar = document.getElementById("finalizar");
+
+document.querySelectorAll(".btn-add").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const produto = btn.getAttribute("data-produto");
+    const preco = parseFloat(btn.getAttribute("data-preco"));
+    cart.push({ produto, preco });
+    atualizarCarrinho();
+  });
+});
+
+function atualizarCarrinho() {
+  listaCarrinho.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+  ${i + 1}. ${item.produto} - R$ ${item.preco.toFixed(2)}
+  <button class="remover-item" data-index="${i}">Remover</button>
+`;
+listaCarrinho.appendChild(li);
+    total += item.preco;
+  });
+  document.querySelectorAll(".remover-item").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const index = e.target.getAttribute("data-index");
+      cart.splice(index, 1); // remove o item do array
+      atualizarCarrinho(); // atualiza o carrinho visualmente
+    });
+  });
+
+  document.getElementById("total-carrinho").innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
+
+}
+
+btnFinalizar.addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Adicione algum produto antes de finalizar o pedido!");
+    return;
+  }
+
+  let total = 0;
+  let msg = "Olá! Gostaria de fazer um pedido:\n\n";
+
+  cart.forEach((item, i) => {
+    msg += `${i + 1}. ${item.produto} - R$ ${item.preco.toFixed(2)}\n`;
+    total += item.preco;
+  });
+
+  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado! 🙌`;
+
+  openWhatsApp(encodeURIComponent(msg));
+});
+
 });

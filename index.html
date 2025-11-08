@@ -42,6 +42,9 @@
     </section>
 
     <section class="showcase container">
+      <div class="more-link">
+       <a class="btn btn-outline" href="cardapio.html">Ver mais bolos</a>
+      </div>
       <h2>Nossos Destaques</h2>
       <div class="grid grid-3">
         <article class="card">
@@ -50,7 +53,7 @@
             <h3>Bolo De Fubá Cremoso</h3>
             <p>Receita clássica, textura macia.</p>
             <div class="card-meta">R$ 32,00</div>
-            <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20De Fubá Cremoso">Pedir</button>
+            <button class="btn btn-small btn-add" data-produto="Quero pedir um Bolo De Fubá Cremoso" data-preco="32.00">Adicionar ao Carrinho</button>
           </div>
         </article>
 
@@ -59,7 +62,7 @@
           <div class="card-body">
             <h3>Torta de Frango</h3>
           <div class="card-meta">R$ 12,00</div>
-            <button class="btn btn-small btn-whatsapp" data-msg="Quero%20comprar%20uma%20Torta de Frango">Pedir</button>
+            <button class="btn btn-small btn-add" data-produto="Quero pedir uma torta de Frango" data-preco="12.00">Adicionar ao Carrinho</button>
           </div>
         </article>
 
@@ -69,15 +72,23 @@
             <h3>Pão Caseiro</h3>
             <p>Bem macio.</p>
             <div class="card-meta">R$ 18,00</div>
-            <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Pão%20Caseiro">Pedir</button>
+            <button class="btn btn-small btn-add" data-produto="Quero pedir um Pão Caseiro" data-preco="18.00">Adicionar ao Carrinho</button>
           </div>
         </article>
-      </div>
+    </div>
       <div class="more-link">
         <a class="btn btn-outline" href="cardapio.html">Ver mais bolos</a>
       </div>
     </section>
 
+    <section id="carrinho" class="container">
+     <h2>🛒 Seu Carrinho</h2>
+  <ul id="lista-carrinho"></ul>
+  <p id="total-carrinho"><strong>Total: R$ 0,00</strong></p>
+  <button id="finalizar" class="btn btn-primary">Finalizar Pedido no WhatsApp</button>
+</section>
+
+      
     <section id="sobre" class="about container">
       <h2>Um pouco sobre a Valdino Bolos Caseiros</h2>
       <p>Desde 2022 nós da Valdino Bolos Caseiros levamos tradição, ingredientes de qualidade e aquele toque de família ao seu pedaço de bolo. Produzido artesanalmente e com muito carinho.</p>
