@@ -3,37 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Valdino Bolos Caseiros </title>
+  <title>Bolos Tradicionais — Valdino Bolos Caseiros</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="images/logo.png" alt="logo" class="logo" /></a>
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="logo Valdino" class="logo" />
+      </a>
       <nav class="nav">
         <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
       </nav>
-      <button class="btn btn-ghost whatsapp" id="cta-whats-3">Pedir pelo WhatsApp</button>
-      <button class="hamburger" id="hamburger-3" aria-label="Menu">&#9776;</button>
+      <button class="btn btn-ghost whatsapp" id="cta-whats-trad">Pedir pelo WhatsApp</button>
+      <button class="hamburger" id="hamburger-trad">&#9776;</button>
     </div>
   </header>
 
   <main class="container">
     <section class="page-head">
       <h1>Bolos Tradicionais</h1>
-      <p>Confira nossas opções tradicionais — clique em Pedir para iniciar pelo WhatsApp.</p>
+      <p>Confira nossas opções clássicas — fofinhos, saborosos e com aquele gostinho de casa.</p>
     </section>
 
     <section class="grid grid-3 products">
-      <!-- Repetir cards para cada bolo; troque imagens, textos e preços -->
       <article class="card">
         <img src="images/tradicional-1.jpg" alt="Bolo de Laranja" />
         <div class="card-body">
           <h3>Bolo de Laranja</h3>
-          <p>Bolo fofo com calda de laranja.</p>
+          <p>Bolo fofo com calda de laranja natural.</p>
           <div class="card-meta">R$ 28,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20de%20Laranja">Pedir</button>
+          <button 
+            class="btn btn-small btn-add" 
+            data-produto="Bolo de Laranja" 
+            data-preco="28.00">
+            Adicionar ao Carrinho
+          </button>
         </div>
       </article>
 
@@ -41,32 +47,47 @@
         <img src="images/tradicional-2.jpg" alt="Bolo de Chocolate" />
         <div class="card-body">
           <h3>Bolo de Chocolate</h3>
-          <p>Clássico, cobertura generosa.</p>
+          <p>Clássico com cobertura generosa e sabor intenso.</p>
           <div class="card-meta">R$ 32,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20de%20Chocolate">Pedir</button>
-        </div>
-      
-	  </article>
-       <article class="card">
-        <img src="images/tradicional-3.jpg" alt="Bolo de Cenoura C/Chocolate" />
-        <div class="card-body">
-          <h3>Bolo de Cenoura C/ cobertura de Chocolate</h3>
-          <p>cobertura tradicional,Extra ou vulcão .</p>
-          <div class="card-meta">R$ 32,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20de%20Chocolate">Pedir</button>
+          <button 
+            class="btn btn-small btn-add" 
+            data-produto="Bolo de Chocolate" 
+            data-preco="32.00">
+            Adicionar ao Carrinho
+          </button>
         </div>
       </article>
-      </section>
+
+      <article class="card">
+        <img src="images/tradicional-3.jpg" alt="Bolo de Cenoura com Chocolate" />
+        <div class="card-body">
+          <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+          <p>Clássico brasileiro: fofinho, molhadinho e irresistível.</p>
+          <div class="card-meta">R$ 32,00</div>
+          <button 
+            class="btn btn-small btn-add" 
+            data-produto="Bolo de Cenoura com Chocolate" 
+            data-preco="32.00">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <section class="carrinho">
+      <h2>🛒 Meu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <div id="total-carrinho"><strong>Total: R$ 0,00</strong></div>
+      <button id="finalizar" class="btn btn-primary">Finalizar Pedido</button>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year-tortas"></span> Valdino Bolos Caseiros</p>
+      <p>© <span id="year-trad"></span> Valdino Bolos Caseiros</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-

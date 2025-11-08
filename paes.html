@@ -23,17 +23,22 @@
 
   <main class="container">
     <section class="page-head">
-      <h1>Pão Caseiro</h1>
-      <p>Os Pães da Valdino Bolos Caseiros são puro amor e Com massa bem leve .</p>
+      <h1>Pães Caseiros</h1>
+      <p>Os Pães da Valdino Bolos Caseiros são puro amor e com massa bem leve.</p>
     </section>
-	
- <section class="grid grid-3 products">
+
+    <section class="grid grid-3 products">
       <article class="card">
         <img src="images/Pão.jpg" alt="Pão Caseiro" />
         <div class="card-body">
           <h3>Pão Caseiro</h3>
           <div class="card-meta">R$ 18,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Pão%20Caseiro">Pedir</button>
+          <button 
+            class="btn btn-small btn-add" 
+            data-produto="Pão Caseiro" 
+            data-preco="18.00">
+            Adicionar ao Carrinho
+          </button>
         </div>
       </article>
 
@@ -42,13 +47,24 @@
         <div class="card-body">
           <h3>Pão de Milho</h3>
           <div class="card-meta">R$ 25,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Pão%20de%20Milho">Pedir</button>
+          <button 
+            class="btn btn-small btn-add" 
+            data-produto="Pão de Milho" 
+            data-preco="25.00">
+            Adicionar ao Carrinho
+          </button>
         </div>
       </article>
-  </section>
+    </section>
+
+    <section class="carrinho">
+      <h2>🛒 Meu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <div id="total-carrinho"><strong>Total: R$ 0,00</strong></div>
+      <button id="finalizar" class="btn btn-primary">Finalizar Pedido</button>
+    </section>
   </main>
-   	
-  
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year-paes"></span> Valdino Bolos Caseiros</p>

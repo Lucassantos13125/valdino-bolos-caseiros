@@ -29,69 +29,77 @@
 
     <section class="grid grid-3 products">
       <article class="card">
-        <img src="images/torta-Individual.jpg" alt="Torta de Frango I" />
+        <img src="images/torta-Individual.jpg" alt="Torta de Frango Individual" />
         <div class="card-body">
-          <h3>Torta de Frango-Individual</h3>
+          <h3>Torta de Frango - Individual</h3>
           <div class="card-meta">R$ 12,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20de%20Frango%20Individual">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta de Frango Individual" data-preco="12.00">Adicionar ao Carrinho</button>
         </div>
       </article>
 
       <article class="card">
-        <img src="images/torta-Pequena.jpg" alt="Torta de Frango-P" />
+        <img src="images/torta-Pequena.jpg" alt="Torta de Frango Pequena" />
         <div class="card-body">
-          <h3>Torta de Frango-Pequena</h3>
+          <h3>Torta de Frango - Pequena</h3>
           <div class="card-meta">R$ 65,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20de%20Frango%20Pequena">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta de Frango Pequena" data-preco="65.00">Adicionar ao Carrinho</button>
         </div>
       </article>
 
       <article class="card">
-        <img src="images/torta-Media.jpg" alt="Torta de Frango-M" />
+        <img src="images/torta-Media.jpg" alt="Torta de Frango Média" />
         <div class="card-body">
-          <h3>Torta de Frando-Media</h3>
+          <h3>Torta de Frango - Média</h3>
           <div class="card-meta">R$ 110,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20de%20Frango%20Media">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta de Frango Média" data-preco="110.00">Adicionar ao Carrinho</button>
         </div>
       </article>
     
-	<article class="card">
-        <img src="images/torta-Grande.jpg" alt="Torta de Frango-G" />
+      <article class="card">
+        <img src="images/torta-Grande.jpg" alt="Torta de Frango Grande" />
         <div class="card-body">
-          <h3>Torta de Frando-Grande</h3>
+          <h3>Torta de Frango - Grande</h3>
           <div class="card-meta">R$ 195,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20De%20Frango%20Grande">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta de Frango Grande" data-preco="195.00">Adicionar ao Carrinho</button>
         </div>
       </article>
 	
-	<article class="card">
-        <img src="images/torta-Holandesa P.jpg" alt="Torta Holandesa P " />
+      <article class="card">
+        <img src="images/torta-Holandesa P.jpg" alt="Torta Holandesa Pequena" />
         <div class="card-body">
-          <h3>Torta Holandesa Pequena</h3>
-          <p>Para que gosta de um doce mais gormet temos a famosa (Torta Holandesa)</p>
+          <h3>Torta Holandesa - Pequena</h3>
+          <p>Para quem gosta de um doce mais gourmet, temos a clássica Torta Holandesa.</p>
           <div class="card-meta">R$ 100,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20Holandesa%20Pequena">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta Holandesa Pequena" data-preco="100.00">Adicionar ao Carrinho</button>
         </div>
-		</article>
+      </article>
 		
-		<article class="card">
-        <img src="images/torta-Holandesa M.jpg" alt="Torta Holandesa M " />
+      <article class="card">
+        <img src="images/torta-Holandesa M.jpg" alt="Torta Holandesa Média" />
         <div class="card-body">
-          <h3>Torta Holandesa Media</h3>
+          <h3>Torta Holandesa - Média</h3>
           <div class="card-meta">R$ 140,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20Holandesa%20Media">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta Holandesa Média" data-preco="140.00">Adicionar ao Carrinho</button>
         </div>
       </article>
 	  
-	  <article class="card">
-        <img src="images/torta-Holandesa G.jpg" alt="Torta Holandesa G " />
+      <article class="card">
+        <img src="images/torta-Holandesa G.jpg" alt="Torta Holandesa Grande" />
         <div class="card-body">
-          <h3>Torta Holandesa Grande</h3>
+          <h3>Torta Holandesa - Grande</h3>
           <div class="card-meta">R$ 180,00</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20uma%20Torta%20Holandesa%20Grande">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Torta Holandesa Grande" data-preco="180.00">Adicionar ao Carrinho</button>
         </div>
       </article>
-	</section>
+    </section>
+
+    <!-- Carrinho integrado -->
+    <section id="carrinho" class="container">
+      <h2>🛒 Seu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p id="total-carrinho"><strong>Total: R$ 0,00</strong></p>
+      <button id="finalizar" class="btn btn-primary">Finalizar Pedido no WhatsApp</button>
+    </section>
   </main>
 
   <footer class="site-footer">
