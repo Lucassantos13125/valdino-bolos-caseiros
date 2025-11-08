@@ -40,7 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
   yearEls.forEach(el => { if(el) el.textContent = new Date().getFullYear(); });
 
   // ---- LÓGICA DO CARRINHO COM PREÇOS ----
-const cart = [];
+let cart = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+// Função para salvar o carrinho sempre que atualizar
+function saveCart() {
+  localStorage.setItem("carrinho", JSON.stringify(cart));
+}
+
 const listaCarrinho = document.getElementById("lista-carrinho");
 const btnFinalizar = document.getElementById("finalizar");
 
@@ -49,6 +55,7 @@ document.querySelectorAll(".btn-add").forEach(btn => {
     const produto = btn.getAttribute("data-produto");
     const preco = parseFloat(btn.getAttribute("data-preco"));
     cart.push({ produto, preco });
+     saveCart(); 
     atualizarCarrinho();
   });
 });
@@ -69,13 +76,18 @@ listaCarrinho.appendChild(li);
   document.querySelectorAll(".remover-item").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const index = e.target.getAttribute("data-index");
-      cart.splice(index, 1); // remove o item do array
+      cart.splice(index, 1); 
+       saveCart(); 
       atualizarCarrinho(); // atualiza o carrinho visualmente
     });
   });
 
   document.getElementById("total-carrinho").innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
 
+}
+   
+    if (cart.length > 0) {
+  atualizarCarrinho();
 }
 
 btnFinalizar.addEventListener("click", () => {
