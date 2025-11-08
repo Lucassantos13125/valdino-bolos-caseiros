@@ -104,10 +104,18 @@ btnFinalizar.addEventListener("click", () => {
     total += item.preco;
   });
 
-  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado!`;
+  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado! 🙌`;
 
+  // Envia pro WhatsApp
   openWhatsApp(encodeURIComponent(msg));
+
+  // 🧹 Limpa o carrinho de todas as páginas
+  cart = [];
+  localStorage.removeItem("carrinho");
+  atualizarCarrinho();
 });
+
+// Botão “Limpar carrinho”
 const btnLimpar = document.getElementById("limpar-carrinho");
 if (btnLimpar) {
   btnLimpar.addEventListener("click", () => {
@@ -117,10 +125,10 @@ if (btnLimpar) {
     }
 
     if (confirm("Tem certeza que deseja limpar todo o carrinho?")) {
-      cart.length = 0; // limpa o array
-      localStorage.removeItem("cart"); // limpa o armazenamento
-      atualizarCarrinho(); // atualiza a exibição
-      alert("Carrinho limpo com sucesso! ");
+      cart = [];
+      localStorage.removeItem("carrinho");
+      atualizarCarrinho();
+      alert("Carrinho limpo com sucesso!");
     }
   });
 }
