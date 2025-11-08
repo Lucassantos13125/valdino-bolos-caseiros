@@ -104,7 +104,7 @@ btnFinalizar.addEventListener("click", () => {
     total += item.preco;
   });
 
-  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado! 🙌`;
+  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado!`;
 
   // Envia pro WhatsApp
   openWhatsApp(encodeURIComponent(msg));
