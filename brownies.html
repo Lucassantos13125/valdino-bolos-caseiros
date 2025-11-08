@@ -34,7 +34,7 @@
           <h3>Brownie Tradicional</h3>
           <p>Chocolate meio amargo e textura perfeita.</p>
           <div class="card-meta">R$ 14,00 (unidade)</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Brownie%20Tradicional">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Brownie Tradicional" data-preco="14.00">Adicionar ao Carrinho</button>
         </div>
       </article>
 
@@ -44,7 +44,7 @@
           <h3>Brownie com Nutella</h3>
           <p>Bem Macio por dentro — com recheio de Nutella.</p>
           <div class="card-meta">R$ 16,00 (unidade)</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Brownie%20de%20Nutella">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Brownie com Nutella" data-preco="16.00">Adicionar ao Carrinho</button>
         </div>
       </article>
 
@@ -54,30 +54,38 @@
           <h3>Brownie de Ninho</h3>
           <p>Bem Macio por dentro - Com recheio de Ninho.</p>
           <div class="card-meta">R$ 16,00 (unidade)</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Brownie%20de%20Ninho">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Brownie de Ninho" data-preco="16.00">Adicionar ao Carrinho</button>
         </div>
       </article>
-    
-	<article class="card">
-        <img src="images/brownie-Leite.jpg" alt="Brownie de doce de Leite" />
+
+      <article class="card">
+        <img src="images/brownie-Leite.jpg" alt="Brownie de Doce de Leite" />
         <div class="card-body">
           <h3>Brownie de Doce de Leite</h3>
           <p>Bem Macio por dentro - Com recheio de Doce de Leite.</p>
           <div class="card-meta">R$ 16,00 (unidade)</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Brownie%20de%20Doce%20de%20Leite">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Brownie de Doce de Leite" data-preco="16.00">Adicionar ao Carrinho</button>
         </div>
       </article>
-	
-		<article class="card">
-        <img src="images/brownie-Bolo.jpg" alt="Blo de Brownie" />
+
+      <article class="card">
+        <img src="images/brownie-Bolo.jpg" alt="Bolo de Brownie" />
         <div class="card-body">
-          <h3>Bolo de Brownie </h3>
-          <p>Para os amantes de Brownie Temos a Versão Grande-(Bolo de Brownie)</p>
+          <h3>Bolo de Brownie</h3>
+          <p>Para os amantes de Brownie — versão grande!</p>
           <div class="card-meta">R$ 190,00 (unidade)</div>
-          <button class="btn btn-small btn-whatsapp" data-msg="Quero%20pedir%20um%20Bolo%20de%20Brownie">Pedir</button>
+          <button class="btn btn-small btn-add" data-produto="Bolo de Brownie" data-preco="190.00">Adicionar ao Carrinho</button>
         </div>
       </article>
-	</section>
+    </section>
+
+    <!-- 🛒 CARRINHO -->
+    <section id="carrinho" class="container">
+      <h2>🛒 Seu Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p id="total-carrinho"><strong>Total: R$ 0,00</strong></p>
+      <button id="finalizar" class="btn btn-primary">Finalizar Pedido no WhatsApp</button>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -87,5 +95,65 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- 🔥 Lógica do carrinho -->
+  <script>
+    const cart = [];
+    const listaCarrinho = document.getElementById("lista-carrinho");
+    const btnFinalizar = document.getElementById("finalizar");
+
+    document.querySelectorAll(".btn-add").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const produto = btn.getAttribute("data-produto");
+        const preco = parseFloat(btn.getAttribute("data-preco"));
+        cart.push({ produto, preco });
+        atualizarCarrinho();
+      });
+    });
+
+    function atualizarCarrinho() {
+      listaCarrinho.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, i) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${i + 1}. ${item.produto} - R$ ${item.preco.toFixed(2)}
+          <button class="remover-item" data-index="${i}">Remover</button>
+        `;
+        listaCarrinho.appendChild(li);
+        total += item.preco;
+      });
+
+      document.getElementById("total-carrinho").innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
+
+      document.querySelectorAll(".remover-item").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const index = btn.getAttribute("data-index");
+          cart.splice(index, 1);
+          atualizarCarrinho();
+        });
+      });
+    }
+
+    btnFinalizar.addEventListener("click", () => {
+      if (cart.length === 0) {
+        alert("Adicione algum produto antes de finalizar o pedido!");
+        return;
+      }
+
+      let total = 0;
+      let msg = "Olá! Gostaria de fazer um pedido de brownies:\n\n";
+
+      cart.forEach((item, i) => {
+        msg += `${i + 1}. ${item.produto} - R$ ${item.preco.toFixed(2)}\n`;
+        total += item.preco;
+      });
+
+      msg += `\nTotal: R$ ${total.toFixed(2)}\n\nObrigado! 🙌`;
+
+      openWhatsApp(encodeURIComponent(msg));
+    });
+  </script>
 </body>
 </html>
