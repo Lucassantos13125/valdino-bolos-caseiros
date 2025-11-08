@@ -104,9 +104,26 @@ btnFinalizar.addEventListener("click", () => {
     total += item.preco;
   });
 
-  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado! 🙌`;
+  msg += `\nTotal da compra: R$ ${total.toFixed(2)}\n\nObrigado!`;
 
   openWhatsApp(encodeURIComponent(msg));
 });
+const btnLimpar = document.getElementById("limpar-carrinho");
+if (btnLimpar) {
+  btnLimpar.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("O carrinho já está vazio!");
+      return;
+    }
+
+    if (confirm("Tem certeza que deseja limpar todo o carrinho?")) {
+      cart.length = 0; // limpa o array
+      localStorage.removeItem("cart"); // limpa o armazenamento
+      atualizarCarrinho(); // atualiza a exibição
+      alert("Carrinho limpo com sucesso! ");
+    }
+  });
+}
 
 });
+
