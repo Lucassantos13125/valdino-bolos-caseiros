@@ -1,78 +1,210 @@
-:root{
-  --green: #2e8b57; /* tom principal — ajusta se quiser */
-  --white: #ffffff;
-  --bg:    #9de79d;
-  --muted: #666666;
+/* =========================
+   🔧 VARIÁVEIS GLOBAIS
+   ========================= */
+:root {
+  /* Cores base do site */
+  --color-primary: #1a5835;
+  --color-secondary: #187c3d;
+  --color-bg: #9de79d;
+  --color-text: #0b0b0b;
+  --color-white: #ffffff;
+  --color-muted: #000000;
+
+  /* Layout */
   --max-width: 1100px;
   --radius: 12px;
   --shadow: 0 6px 18px rgba(30,30,30,0.06);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+  /* Variáveis dinâmicas (podem ser sobrepostas por tema ou JS) */
+  --page-bg-color: var(--color-bg);
+  --highlight-color: var(--color-primary);
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:#0b0b0b}
-.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+/* =========================
+   🎨 TEMAS DE PÁGINA (customizáveis)
+   ========================= */
 
-.site-header{background:var(--white);border-bottom:1px solid #eee}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px}
-.brand{display:flex;align-items:center;text-decoration:none}
-.logo{height:56px}
-.nav{display:flex;gap:18px;align-items:center}
-.nav a{color:inherit;text-decoration:none;font-weight:600}
-.hamburger{display:none;background:none;border:0;font-size:28px}
+/* Página inicial */
+.tema-home {
+  --page-bg-color: #55e65d;
+  --highlight-color: #000000;
+}
 
-.btn{border:0;padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:700}
-.btn-primary{background:var(--green);color:var(--white)}
-.btn-outline{background:transparent;border:2px solid var(--green);color:var(--green)}
-.btn-ghost{background:transparent;color:var(--green)}
-.btn-small{padding:8px 12px;font-size:14px;border-radius:8px}
-.whatsapp{background:#25D366;color:#fff;border-radius:10px}
+/* Página de produtos */
+.tema-produtos {
+  --page-bg-color: #ffffff;
+  --highlight-color: #d97706;
+}
 
-.hero{padding:40px 0}
-.hero-inner{display:flex;gap:24px;align-items:center;justify-content:space-between}
-.hero-text h1{font-size:36px;margin:0;color:var(--green)}
-.lead{color:var(--muted);margin-top:8px}
-.hero-image img{max-width:520px;border-radius:16px;box-shadow:var(--shadow);width:100%;height:auto}
+/* Página de contato */
+.tema-contato {
+  --page-bg-color: #e6f2ff;
+  --highlight-color: #2563eb;
+}
 
-.grid{display:grid;gap:18px}
-.grid-3{grid-template-columns:repeat(3,1fr)}
-.card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-.card img{width:100%;height:200px;object-fit:cover}
-.card-body{padding:12px}
-.card-meta{margin-top:8px;font-weight:800;color:var(--green)}
+/* Página “sobre” */
+.tema-sobre {
+  --page-bg-color: #f1edf1;
+  --highlight-color: #9333ea;
+}
 
-.showcase{margin-top:20px}
-.more-link{text-align:center;margin-top:12px}
+/* Página de tortas */
+.tema-tortas {
+  --page-bg-color: #cfac7d;
+  --highlight-color: #000000;
+}
 
-.about, .contact{margin-top:36px;padding:18px;background:var(--white);border-radius:12px;box-shadow:var(--shadow)}
+/* =========================
+   💅 ESTILOS GERAIS
+   ========================= */
+* { box-sizing: border-box; }
 
-.site-footer{margin-top:30px;padding:20px 0;text-align:center;color:var(--muted)}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--page-bg-color, var(--color-bg));
+  color: var(--color-text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: background 220ms ease, color 180ms ease;
+}
 
+/* Containers */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 24px; }
+
+/* =========================
+   🧭 HEADER / NAVEGAÇÃO
+   ========================= */
+.site-header { background: var(--color-white); border-bottom: 1px solid #eeeeee; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px; }
+.brand { display: flex; align-items: center; text-decoration: none; }
+.logo { height: 56px; }
+.nav { display: flex; gap: 18px; align-items: center; }
+.nav a { color: inherit; text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+.nav a:hover { color: var(--highlight-color); }
+.hamburger { display: none; background: none; border: 0; font-size: 28px; }
+
+/* =========================
+   ⚡ BOTÕES
+   ========================= */
+.btn { border: 0; padding: 10px 16px; border-radius: 10px; cursor: pointer; font-weight: 700; transition: 0.18s ease; }
+.btn-primary { background: var(--highlight-color); color: var(--color-white); }
+.btn-outline { background: transparent; border: 2px solid var(--highlight-color); color: var(--highlight-color); }
+.btn-outline:hover { background: var(--highlight-color); color: var(--color-white); }
+.btn-ghost { background: transparent; color: var(--highlight-color); }
+.btn-small { padding: 8px 12px; font-size: 14px; border-radius: 8px; }
+.whatsapp { background: var(--color-secondary); color: var(--color-white); border-radius: 10px; }
+
+/* =========================
+   🏠 HERO / BANNERS
+   ========================= */
+.hero { padding: 40px 0; }
+.hero-inner { display: flex; gap: 24px; align-items: center; justify-content: space-between; }
+.hero-text h1 { font-size: 36px; margin: 0; color: var(--highlight-color); }
+.lead { color: var(--color-muted); margin-top: 8px; }
+.hero-image img { max-width: 520px; border-radius: 16px; box-shadow: var(--shadow); width: 100%; height: auto; }
+
+/* =========================
+   🧱 CARDS E GRID
+   ========================= */
+.grid { display: grid; gap: 18px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.card { background: var(--color-white); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 12px; }
+.card-meta { margin-top: 8px; font-weight: 800; color: var(--highlight-color); }
+
+/* =========================
+   💬 OUTRAS SEÇÕES
+   ========================= */
+.about, .contact { margin-top: 36px; padding: 18px; background: var(--color-white); border-radius: var(--radius); box-shadow: var(--shadow); }
+.showcase { margin-top: 20px; }
+.more-link { text-align: center; margin-top: 12px; }
+
+/* =========================
+   ⚙️ BOTÕES DE AÇÃO
+   ========================= */
 .remover-item {
   margin-left: 8px;
-  background-color: #2e8b57;
-  color: white;
+  background-color: var(--highlight-color);
+  color: var(--color-white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   padding: 2px 6px;
+  transition: transform .12s ease, filter .12s ease;
+}
+.remover-item:hover { transform: translateY(-1px); filter: brightness(.95); }
+
+/* =========================
+   📱 RESPONSIVIDADE
+   ========================= */
+@media (max-width: 900px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner { flex-direction: column-reverse; }
+  .hero-image img { max-width: 100%; }
+  .nav { display: none; }
+  .hamburger { display: block; }
+}
+@media (max-width: 600px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .logo { height: 46px; }
+  .hero-text h1 { font-size: 28px; }
 }
 
-.remover-item:hover {
-  background-color: #2e8b57;
+/* =========================
+   🔧 PAINEL DE EDIÇÃO DE CORES (injetado via JS)
+   ========================= */
+#theme-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--highlight-color);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  cursor: pointer;
+  z-index: 9998;
+  font-weight: 700;
+  border: none;
 }
 
-
-@media (max-width:900px){
-  .grid-3{grid-template-columns:repeat(2,1fr)}
-  .hero-inner{flex-direction:column-reverse}
-  .hero-image img{max-width:100%}
-  .nav{display:none}
-  .hamburger{display:block}
+/* painel */
+#theme-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 320px;
+  max-width: calc(100% - 32px);
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(10,10,10,0.12);
+  padding: 12px;
+  font-size: 14px;
+  z-index: 9999;
+  display: none;
 }
 
-@media (max-width:600px){
-  .grid-3{grid-template-columns:1fr}
-  .logo{height:46px}
-  .hero-text h1{font-size:28px}
+#theme-panel.open { display: block; }
+#theme-panel h4 { margin: 0 0 8px 0; font-size: 15px; }
+.theme-row { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+.theme-row label { min-width: 100px; font-weight:600; }
+.theme-row input[type="color"] { width: 48px; height: 36px; border: none; padding:0; background: transparent; cursor:pointer; border-radius:6px; }
+
+/* ações do painel */
+.theme-actions { display:flex; gap:8px; margin-top:8px; }
+.theme-actions button { flex:1; padding:8px 10px; border-radius:8px; border: none; cursor:pointer; font-weight:700; }
+.theme-actions .save { background: var(--highlight-color); color: var(--color-white); }
+.theme-actions .reset { background: transparent; border: 1px solid #ddd; color: #333; }
+
+/* responsivo painel */
+@media (max-width:420px) {
+  #theme-panel { width: 92%; right: 4%; bottom: 76px; }
+  #theme-toggle { right: 8px; bottom: 12px; }
 }
