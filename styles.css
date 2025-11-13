@@ -32,19 +32,19 @@
 }
 
 /* Página de produtos */
-.tema-produtos {
+.tema-bolos-tradicionais {
   --page-bg-color: #ffffff;
   --highlight-color: #d97706;
 }
 
 /* Página de contato */
-.tema-contato {
+.tema-cardapio {
   --page-bg-color: #e6f2ff;
   --highlight-color: #2563eb;
 }
 
 /* Página “sobre” */
-.tema-sobre {
+.tema-paes {
   --page-bg-color: #f1edf1;
   --highlight-color: #9333ea;
 }
@@ -52,6 +52,11 @@
 /* Página de tortas */
 .tema-tortas {
   --page-bg-color: #cfac7d;
+  --highlight-color: #000000;
+}
+
+.tema-brownie {
+  --page-bg-color: #4ea2da;
   --highlight-color: #000000;
 }
 
