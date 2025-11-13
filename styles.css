@@ -6,7 +6,7 @@
   --color-primary: #1a5835;
   --color-secondary: #187c3d;
   --color-bg: #9de79d;
-  --color-text: #0b0b0b;
+  --color-text: #000000;
   --color-white: #ffffff;
   --color-muted: #000000;
 
@@ -39,8 +39,8 @@
 
 /* Página de contato */
 .tema-cardapio {
-  --page-bg-color: #e6f2ff;
-  --highlight-color: #2563eb;
+  --page-bg-color: #99eb96;
+  --highlight-color: #0744ec;
 }
 
 /* Página “sobre” */
