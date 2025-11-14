@@ -3,11 +3,11 @@
    ========================= */
 :root {
   /* Cores base do site */
-  --color-primary: #1a5835;
-  --color-secondary: #187c3d;
+  --color-primary: #315b1c;
+  --color-secondary: #6e9c57;
   --color-bg: #9de79d;
   --color-text: #000000;
-  --color-white: #ffffff;
+  --color-white: #f9fff5;
   --color-muted: #000000;
 
   /* Layout */
@@ -27,37 +27,43 @@
 
 /* Página inicial */
 .tema-home {
-  --page-bg-color: #55e65d;
-  --highlight-color: #000000;
+  --page-bg-color: #6e9c57;
+  --highlight-color: #325c1c;
+  --color-text: #000000;
 }
 
 /* Página de produtos */
 .tema-bolos-tradicionais {
   --page-bg-color: #ffffff;
   --highlight-color: #d97706;
+  --color-text: #000000;
 }
 
 /* Página de contato */
 .tema-cardapio {
   --page-bg-color: #99eb96;
   --highlight-color: #0744ec;
+  --color-text: #000000;
 }
 
 /* Página “sobre” */
 .tema-paes {
   --page-bg-color: #f1edf1;
   --highlight-color: #9333ea;
+  --color-text: #000000;
 }
 
 /* Página de tortas */
 .tema-tortas {
   --page-bg-color: #cfac7d;
   --highlight-color: #000000;
+  --color-text: #000000;
 }
 
 .tema-brownie {
   --page-bg-color: #4ea2da;
   --highlight-color: #000000;
+  --color-text: #000000;
 }
 
 /* =========================
