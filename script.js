@@ -8,6 +8,40 @@ function openWhatsApp(msg){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  function carregarDadosCliente() {
+  const nome = localStorage.getItem("cliente_nome") || "";
+  const sobrenome = localStorage.getItem("cliente_sobrenome") || "";
+  const telefone = localStorage.getItem("cliente_telefone") || "";
+
+  const nomeEl = document.getElementById("cliente-nome");
+  const sobrenomeEl = document.getElementById("cliente-sobrenome");
+  
+
+  if (nomeEl) nomeEl.value = nome;
+  if (sobrenomeEl) sobrenomeEl.value = sobrenome;
+  
+}
+
+// Salvar sempre que digitar
+function ativarAutoSaveCliente() {
+  const nomeEl = document.getElementById("cliente-nome");
+  const sobrenomeEl = document.getElementById("cliente-sobrenome");
+  
+
+  if (nomeEl) nomeEl.addEventListener("input", e => {
+    localStorage.setItem("cliente_nome", e.target.value);
+  });
+
+  if (sobrenomeEl) sobrenomeEl.addEventListener("input", e => {
+    localStorage.setItem("cliente_sobrenome", e.target.value);
+  });
+
+  
+}
+
+// Ativa sincronização ao carregar a página
+carregarDadosCliente();
+ativarAutoSaveCliente();
   // CTAs principais
   const heroBtn = document.getElementById("hero-whats");
   const cta = document.getElementById("cta-whats");
@@ -136,7 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnLimparCarrinho) {
     btnLimparCarrinho.addEventListener("click", () => {
       if (cart.length === 0) return alert("O carrinho já está vazio!");
-
+        
+     
       if (confirm("Tem certeza que deseja limpar o carrinho?")) {
         cart = [];
         saveCart();
@@ -145,28 +180,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Finalizar pedido
-  if (btnFinalizar) {
-    btnFinalizar.addEventListener("click", () => {
-      if (cart.length === 0) return alert("O carrinho está vazio!");
-
-      let totalGeral = 0;
-      let msg = "Olá! Gostaria de fazer um pedido:\n\n";
-
-      cart.forEach((item, i) => {
-        msg += `${i + 1}. ${item.produto} - Qtd: ${item.quantity} - R$ ${item.total.toFixed(2)}\n`;
-        totalGeral += item.total;
-      });
-
-      msg += `\nTotal: R$ ${totalGeral.toFixed(2)}\n\nObrigado!`;
-
-      openWhatsApp(encodeURIComponent(msg));
-
-      cart = [];
-      saveCart();
-      atualizarCarrinho();
-    });
+   // helper: limpa apenas dígitos do telefone
+  function apenasDigitos(str) {
+    return (str || '').replace(/\D/g, '');
   }
+
+  // helper: valida telefone (entre 8 e 13 dígitos, ajusta se quiser)
+  function telefoneValido(tel) {
+    const d = apenasDigitos(tel);
+    return d.length >= 8 && d.length <= 13;
+  }
+
+  // Finalizar pedido (AGORA INCLUINDO DADOS DO CLIENTE)
+if (btnFinalizar) {
+  btnFinalizar.addEventListener("click", () => {
+    if (cart.length === 0) return alert("O carrinho está vazio!");
+
+    // pega valores do formulário
+    const nome = document.getElementById('cliente-nome')?.value.trim() || "";
+    const sobrenome = document.getElementById('cliente-sobrenome')?.value.trim() || "";
+
+    // validações
+    if (!nome || !sobrenome) {
+      return alert('Preencha Nome e Sobrenome antes de finalizar o pedido.');
+    }
+
+    // monta mensagem com dados + carrinho
+    let msg = `Cliente: ${nome} ${sobrenome}\n\nPedido:\n`;
+    let totalGeral = 0;
+
+    cart.forEach((item, i) => {
+      msg += `${i + 1}. ${item.produto} - Qtd: ${item.quantity} - R$ ${item.total.toFixed(2)}\n`;
+      totalGeral += item.total;
+    });
+
+    msg += `\nTotal: R$ ${totalGeral.toFixed(2)}\nObrigado!`;
+
+    // envia para o WhatsApp
+    openWhatsApp(encodeURIComponent(msg));
+
+    // limpa carrinho
+    cart = [];
+    saveCart();
+    atualizarCarrinho();
+  });
+}
+
+
 
   // iniciar carrinho ao carregar
   atualizarCarrinho();
