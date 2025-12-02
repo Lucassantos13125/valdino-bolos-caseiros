@@ -16,9 +16,10 @@
         <a href="index.html">Início</a>
         <a href="cardapio.html">Cardápio</a>
       </nav>
-      <button class="btn btn-ghost whatsapp" id="cta-whats-brownies">Pedir pelo WhatsApp</button>
-      <button class="hamburger" id="hamburger-brownies">&#9776;</button>
-    </div>
+       <a href="carrinho.html" class="cart-icon" id="header-cart">
+  🛒 <span id="cart-count">0</span>
+</a>
+
   </header>
 
   <main class="container">
@@ -77,30 +78,7 @@
           <button class="btn btn-small btn-add" data-produto="Bolo de Brownie" data-preco="190.00">Adicionar ao Carrinho</button>
         </div>
       </article>
-    </section>
-
-    <!-- 🛒 CARRINHO -->
-    <section class="carrinho">
-  <h2>🛒 Meu Carrinho</h2>
-  <ul id="lista-carrinho"></ul>
-  <div id="total-carrinho"><strong>Total: R$ 0,00</strong></div>
-  <div id="dados-cliente" style="margin-top:10px; padding:12px; border-radius:8px; background:rgb(68, 116, 66);">
-    <h3 style="margin:0 0 8px 0;">Dados do Cliente</h3>
-
-    <label for="cliente-nome">Nome</label><br>
-    <input type="text" id="cliente-nome" placeholder="João" required style="width:40%; padding:8px; margin:6px 0;"><br>
-
-    <label for="cliente-sobrenome">Sobrenome</label><br>
-    <input type="text" id="cliente-sobrenome" placeholder="Silva" required style="width:40%; padding:8px; margin:6px 0;"><br>
-
-    
-  </div>
-  <div class="botoes-carrinho">
-    <button id="finalizar" class="btn btn-primary">Finalizar Pedido</button>
-    <button id="limpar-carrinho" class="btn btn-outline"> Limpar Carrinho</button>
-  </div>
-</section>
-
+   
   </main>
 
   <footer class="site-footer">

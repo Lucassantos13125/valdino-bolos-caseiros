@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meu Carrinho • Valdino Bolos Caseiros</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="tema-carrinho">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="" class="logo" />
+    </a>
+    <nav class="nav">
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="carrinho">
+    <h2>🛒 Meu Carrinho</h2>
+
+    <ul id="lista-carrinho"></ul>
+    <div id="total-carrinho"><strong>Total: R$ 0,00</strong></div>
+
+    <div id="dados-cliente">
+      <h3>Dados do Cliente</h3>
+
+      <label>Nome</label><br>
+      <input type="text" id="cliente-nome" style="width:40%; padding:8px;"><br>
+
+      <label>Sobrenome</label><br>
+      <input type="text" id="cliente-sobrenome" style="width:40%; padding:8px;"><br>
+    </div>
+
+    <div class="botoes-carrinho">
+      <button id="finalizar" class="btn btn-primary">Finalizar Pedido</button>
+      <button id="limpar-carrinho" class="btn btn-outline">Limpar Carrinho</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

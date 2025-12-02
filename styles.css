@@ -259,3 +259,39 @@ html, body {
   background: #e4e4e4;
 }
 
+
+#dados-cliente{ 
+  width: 1000px;
+  padding: 10px;
+  margin-top:10px;
+  border-radius:8px; 
+  background:rgb(68, 116, 66);
+}
+
+.cart-icon {
+  background: #406f36;       /* verde do layout */
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease;
+}
+
+.cart-icon:hover {
+  background: #2f5228;
+}
+
+#cart-count {
+  background: #fff;
+  color: #406f36;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}

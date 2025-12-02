@@ -82,6 +82,12 @@ ativarAutoSaveCliente();
   function saveCart() {
     localStorage.setItem("carrinho", JSON.stringify(cart));
   }
+    // Contador do carrinho no header
+  function atualizarContador() {
+    const countEl = document.getElementById("cart-count");
+    if (countEl) countEl.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+  }
+
 
   const listaCarrinho = document.getElementById("lista-carrinho");
   const btnFinalizar = document.getElementById("finalizar");
@@ -105,6 +111,7 @@ ativarAutoSaveCliente();
 
     saveCart();
     atualizarCarrinho();
+    atualizarContador();
   }
 
   // Botões adicionar
@@ -123,6 +130,7 @@ ativarAutoSaveCliente();
     cart.splice(index, 1);
     saveCart();
     atualizarCarrinho();
+    atualizarContador();
   }
 
   // Atualizar carrinho na tela
@@ -176,6 +184,7 @@ ativarAutoSaveCliente();
         cart = [];
         saveCart();
         atualizarCarrinho();
+        atualizarContador();
       }
     });
   }
@@ -230,4 +239,6 @@ if (btnFinalizar) {
 
   // iniciar carrinho ao carregar
   atualizarCarrinho();
+  atualizarContador();
 });
+
