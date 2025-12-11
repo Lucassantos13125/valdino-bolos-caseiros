@@ -29,7 +29,7 @@
 .tema-home {
   --page-bg-color: #6e9c57;
   --highlight-color: #394e2e;
-  --color-text: #000000;
+  --color-text: #0f0f0f;
   --color-white: #ffffff;
 }
 
@@ -44,14 +44,14 @@
 .tema-cardapio {
   --page-bg-color: #99eb96;
   --highlight-color: #0744ec;
-  --color-text: #000000;
+  --color-text: #111010;
 }
 
 /* Página “sobre” */
 .tema-paes {
-  --page-bg-color: #f1edf1;
-  --highlight-color: #9333ea;
-  --color-text: #000000;
+  --page-bg-color: #5bd461;
+  --highlight-color: #151416;
+  --color-text: #1b1919;
 }
 
 /* Página de tortas */
@@ -62,7 +62,7 @@
 }
 
 .tema-brownie {
-  --page-bg-color: #4ea2da;
+  --page-bg-color: #4eda65;
   --highlight-color: #000000;
   --color-text: #000000;
 }
