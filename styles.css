@@ -49,20 +49,20 @@
 
 /* Página “sobre” */
 .tema-paes {
-  --page-bg-color: #5bd461;
+  --page-bg-color: #99eb96;
   --highlight-color: #151416;
   --color-text: #1b1919;
 }
 
 /* Página de tortas */
 .tema-tortas {
-  --page-bg-color: #cfac7d;
+  --page-bg-color: #99eb96;
   --highlight-color: #000000;
   --color-text: #000000;
 }
 
 .tema-brownie {
-  --page-bg-color: #4eda65;
+  --page-bg-color: #99eb96;
   --highlight-color: #000000;
   --color-text: #000000;
 }
