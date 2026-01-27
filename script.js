@@ -1,5 +1,5 @@
 // Número do WhatsApp (formato wa.me): 55  DDI  DDD  número (sem espaços)
-const WA_NUMBER = "5511961561266";
+const WA_NUMBER = "5511996655448";
 const defaultMsg = encodeURIComponent("Olá! Gostaria de fazer um pedido.");
 
 function openWhatsApp(msg){
