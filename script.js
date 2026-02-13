@@ -61,13 +61,28 @@ ativarAutoSaveCliente();
     });
   });
 
-  // hamburger menu mobile
-  document.querySelectorAll(".hamburger").forEach(h => {
-    h.addEventListener("click", ()=>{
-      const nav = h.closest(".header-inner").querySelector(".nav");
-      if(nav) nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-    });
+  // hamburger menu mobile (VERSÃO CORRETA)
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+if (hamburger && nav) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
   });
+}
+// 🔥 PARTE PROFISSIONAL
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+    nav.classList.remove("active");
+  }
+});
+
 
   // anos no footer
   const yearEls = [document.getElementById("year"), document.getElementById("year2"), document.getElementById("year3")];

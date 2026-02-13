@@ -88,7 +88,10 @@ html, body {
 /* =========================
    🧭 HEADER / NAVEGAÇÃO
    ========================= */
-.site-header { background: var(--color-white); border-bottom: 1px solid #eeeeee; }
+.site-header {
+  background: var(--color-white);
+  border-bottom: 1px solid #eeeeee;
+  position: relative; /* IMPORTANTE */ }
 .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px; }
 .brand { display: flex; align-items: center; text-decoration: none; }
 .logo { height: 56px; }
@@ -156,8 +159,33 @@ html, body {
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .hero-inner { flex-direction: column-reverse; }
   .hero-image img { max-width: 100%; }
-  .nav { display: none; }
-  .hamburger { display: block; }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--color-white);
+  flex-direction: column;
+  width: 220px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.nav.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 }
 @media (max-width: 600px) {
   .grid-3 { grid-template-columns: 1fr; }
