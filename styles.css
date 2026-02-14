@@ -115,9 +115,17 @@ html, body {
    🏠 HERO / BANNERS
    ========================= */
 .hero { padding: 40px 0; }
+
 .hero-inner { display: flex; gap: 24px; align-items: center; justify-content: space-between; }
+
 .hero-text h1 { font-size: 36px; margin: 0; color: var(--highlight-color); }
-.lead { color: var(--color-muted); margin-top: 8px; }
+
+.lead { 
+  color: #0b0b0b;  /* Cor da letra */
+  font-size: 22px;   /* Tamanho da letra */
+  margin-top: 8px;   /* espaçamento da letra */
+}
+
 .hero-image img { max-width: 520px; border-radius: 16px; box-shadow: var(--shadow); width: 100%; height: auto; }
 
 /* =========================
