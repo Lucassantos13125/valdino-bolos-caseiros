@@ -27,7 +27,6 @@
 
 /* Página inicial */
 .tema-home {
-  --page-bg-color: #6e9c57;
   --highlight-color: #394e2e;
   --color-text: #0f0f0f;
   --color-white: #ffffff;
@@ -136,7 +135,7 @@ html, body {
 .card { background: var(--color-white); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow); }
 .card img { width: 100%; height: 200px; object-fit: cover; }
 .card-body { padding: 12px; }
-.card-meta { margin-top: 8px; font-weight: 800; color: var(--highlight-color); }
+.card-meta { margin-top: 8px; font-weight: 800; color: #0b0b0b;  }
 
 /* =========================
    💬 OUTRAS SEÇÕES
