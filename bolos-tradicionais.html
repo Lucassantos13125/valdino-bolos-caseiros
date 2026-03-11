@@ -33,13 +33,16 @@
       <p>Confira nossas opções clássicas fofinhos, saborosos e com aquele gostinho de casa.</p>
     </section>
 
-    <section class="grid grid-3 products">
+    <section class="grid grid-3 products" id="produtos">
       <article class="card">
         <img src="images/tradicional-Fubá.jpg" alt="Bolo de Fubá" />
         <div class="card-body">
           <h3>Bolo de Fubá</h3>
           <p>Bolo fofo feito de fubá.</p>
-          <div class="card-meta">R$ 28,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Fubá">
+            R$ 28,00
+          </div>
+          
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Fubá" 
@@ -54,7 +57,7 @@
         <div class="card-body">
           <h3>Bolo de fubá com erva doce</h3>
           <p>Bolo Macio de fubá com erva doce .</p>
-          <div class="card-meta">R$ 28,00</div>
+         <div class="card-meta preco-produto" data-produto="Bolo de tradicional-Fubá-ErvaD">R$ 28,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de fubá com erva doce" 
@@ -70,7 +73,7 @@
         <div class="card-body">
           <h3>Bolo de Coco </h3>
           <p>Bolo Macio de coco com cobertura de leite condensado e coco ralado.</p>
-          <div class="card-meta">R$ 35,00</div>
+         <div class="card-meta preco-produto" data-produto="Bolo de Coco">R$ 35,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de coco " 
@@ -85,7 +88,7 @@
         <div class="card-body">
           <h3>Bolo de Milho</h3>
           <p>Bolo de Milho bem macio.</p>
-          <div class="card-meta">R$ 30,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Milho">R$ 30,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Milho" 
@@ -100,7 +103,7 @@
         <div class="card-body">
           <h3>Bolo de Mandioca</h3>
           <p>Bolo Macio de Mandioca.</p>
-          <div class="card-meta">R$ 35,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Mandioca">>R$ 35,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Mandioca" 
@@ -111,11 +114,11 @@
       </article>
 
        <article class="card">
-        <img src="images/Bolo-fuba-cremoso.jpg" alt="Bolo de Bolo-fuba-cremoso" />
+        <img src="images/Bolo-fuba-cremoso.jpg" alt=" Bolo-fuba-cremoso" />
         <div class="card-body">
           <h3>Bolo de fuba cremoso</h3>
           <p>Bolo Macio de fuba Cremoso.</p>
-          <div class="card-meta">R$ 35,00</div>
+          <div class="card-meta preco-produto" data-produto=" Bolo-fuba-cremoso">R$ 35,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Fubá cremoso" 
@@ -130,7 +133,7 @@
         <div class="card-body">
           <h3>Bolo de fubá com goiabada</h3>
           <p>Bolo Macio de fubá com goiabada.</p>
-          <div class="card-meta">R$ 35,00</div>
+         <div class="card-meta preco-produto" data-produto="Bolo de tradicional-Fubá-goiabada">R$ 35,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de fubá com goiabada" 
@@ -145,7 +148,7 @@
         <div class="card-body">
           <h3>Bolo de limão  </h3>
           <p>Bolo fofo feito de limão com cobertura .</p>
-          <div class="card-meta">R$ 35,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de limão com cobertura">R$ 35,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de limão com cobertura" 
@@ -160,7 +163,7 @@
         <div class="card-body">
           <h3>Bolo de Laranja</h3>
           <p>Bolo fofo com calda de laranja natural.</p>
-          <div class="card-meta">R$ 30,00</div>
+         <div class="card-meta preco-produto" data-produto="Bolo de laranja">R$ 30,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Laranja" 
@@ -175,7 +178,7 @@
         <div class="card-body">
           <h3>Bolo de Chocolate</h3>
           <p>Clássico com cobertura generosa e sabor intenso.</p>
-          <div class="card-meta">R$ 40,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Chocolate">R$ 40,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Chocolate" 
@@ -190,7 +193,7 @@
         <div class="card-body">
           <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
           <p>Clássico fofinho e irresistível.</p>
-          <div class="card-meta">R$ 40,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Cenoura com cobertura">R$ 40,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Cenoura com Chocolate" 
@@ -205,7 +208,7 @@
         <div class="card-body">
           <h3>Bolo de pão de queijo </h3>
           <p>Bolo fofinho sabor Pão de Queijo.</p>
-          <div class="card-meta">R$ 50,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de pão de queijo">R$ 50,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de pão de queijo " 
@@ -220,7 +223,7 @@
         <div class="card-body">
           <h3>Bolo de Chocolate com cobertura de Brigadeiro</h3>
           <p>Cobertura generosa e sabor intenso.</p>
-          <div class="card-meta">R$ 59,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Chocolate brigadeiro">R$ 59,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Chocolate cobertura de brigadeiro" 
@@ -235,7 +238,7 @@
         <div class="card-body">
           <h3>Bolo de Cenoura  ou Chocolate com cobertura Vulcão</h3>
           <p>Cobertura generosa e sabor intenso.</p>
-          <div class="card-meta">R$ 55,00</div>
+          <div class="card-meta preco-produto" data-produto="Bolo de Cenoura Vulcão">R$ 55,00</div>
           <button 
             class="btn btn-small btn-add" 
             data-produto="Bolo de Cenoura com cobertura Vulcão" 
@@ -256,5 +259,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="produtos.js"></script>
+  
 </body>
 </html>
