@@ -2,30 +2,29 @@ fetch("https://script.google.com/macros/s/AKfycbwZsYYhE2OFDYMjkTrrmRPo0iT6iPEkYj
 
 .then(response => response.json())
 
-.then(data => {
+.then(produtos => {
 
-  let container = document.getElementById("produtos");
+  const cards = document.querySelectorAll(".card");
 
-  data.forEach(produto => {
+  cards.forEach(card => {
 
-    container.innerHTML += `
-    
-    <div class="produto">
+    const nomeProduto = card.querySelector("h3").innerText.trim();
 
-      <h3>${produto.produto}</h3>
+    const produtoAPI = produtos.find(p => p.produto === nomeProduto);
 
-      <p>${produto.descricao}</p>
+    if(produtoAPI){
 
-      <p class="preco">R$ ${produto.preco}</p>
+      const precoHTML = card.querySelector(".card-meta");
 
-      <a class="botao"
-      href="https://wa.me/5511996655448?text=Olá gostaria de pedir ${produto.produto}">
-      Pedir no WhatsApp
-      </a>
+      precoHTML.innerText = "R$ " + produtoAPI.preco + ",00";
 
-    </div>
+      const botao = card.querySelector(".btn-add");
 
-    `;
+      if(botao){
+        botao.dataset.preco = produtoAPI.preco;
+      }
+
+    }
 
   });
 
