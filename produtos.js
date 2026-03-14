@@ -8,15 +8,15 @@ fetch("https://script.google.com/macros/s/AKfycbwZsYYhE2OFDYMjkTrrmRPo0iT6iPEkYj
 
   cards.forEach(card => {
 
-    const nomeProduto = card.querySelector("h3").innerText.trim();
+    const nome = card.querySelector("h3").innerText.trim();
 
-    const produtoAPI = produtos.find(p => p.produto === nomeProduto);
+    const produtoAPI = produtos.find(p => p.produto.trim() === nome);
 
     if(produtoAPI){
 
-      const precoHTML = card.querySelector(".card-meta");
+      const preco = card.querySelector(".card-meta");
 
-      precoHTML.innerText = "R$ " + produtoAPI.preco + ",00";
+      preco.innerText = "R$ " + produtoAPI.preco;
 
       const botao = card.querySelector(".btn-add");
 
