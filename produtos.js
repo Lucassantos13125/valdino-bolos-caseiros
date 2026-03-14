@@ -16,7 +16,7 @@ fetch("https://script.google.com/macros/s/AKfycbwZsYYhE2OFDYMjkTrrmRPo0iT6iPEkYj
 
       const preco = card.querySelector(".card-meta");
 
-      preco.innerText = "R$ " + produtoAPI.preco;
+      preco.innerText = "R$ " + Number(produtoAPI.preco).toFixed(2).replace(".", ",");
 
       const botao = card.querySelector(".btn-add");
 
