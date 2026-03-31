@@ -97,7 +97,21 @@ document.addEventListener("click", (e) => {
   function saveCart() {
     localStorage.setItem("carrinho", JSON.stringify(cart));
   }
-    // Contador do carrinho no header
+
+      // 🔔 Toast de notificação
+function showToast(msg = "Produto adicionado ao carrinho!") {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.innerText = msg;
+  toast.style.display = "block";
+
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 2000);
+}   
+  
+  // Contador do carrinho no header
   function atualizarContador() {
     const countEl = document.getElementById("cart-count");
     if (countEl) countEl.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -127,6 +141,7 @@ document.addEventListener("click", (e) => {
     saveCart();
     atualizarCarrinho();
     atualizarContador();
+    showToast(`🔥 ${produto} foi pro carrinho!`);
   }
 
   // Botões adicionar

@@ -12,11 +12,24 @@
   <div class="container header-inner">
     <a href="index.html" class="brand">
       <img src="images/logo.png" alt="" class="logo" />
-    </a>
-    <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="cardapio.html">Cardápio</a>
-    </nav>
+    </a><nav class="nav">
+  <a href="index.html">Início</a>
+  <a href="cardapio.html">Cardápio</a>
+
+  <a href="carrinho.html" id="cart-icon" style="position:relative;">
+    🛒
+    <span id="cart-count" style="
+      position:absolute;
+      top:-8px;
+      right:-10px;
+      background:rgb(255, 0, 0);
+      color:white;
+      border-radius:50%;
+      padding:3px 7px;
+      font-size:12px;
+    ">0</span>
+  </a>
+</nav>
   </div>
 </header>
 
@@ -42,6 +55,20 @@
       <button id="finalizar" class="btn btn-primary">Finalizar Pedido</button>
       <button id="limpar-carrinho" class="btn btn-outline">Limpar Carrinho</button>
     </div>
+
+<div id="toast" style="
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background: #333;
+     color: #fff;
+     padding: 12px 20px;
+     border-radius: 8px;
+     display: none;
+     z-index: 999;
+">
+  Produto adicionado ao carrinho!
+</div>
   </section>
 
 </main>
