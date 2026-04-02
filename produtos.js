@@ -1,31 +1,62 @@
-fetch("https://script.google.com/macros/s/AKfycbwZsYYhE2OFDYMjkTrrmRPo0iT6iPEkYj60P_VhEzWyMv55rujTGn0IxHFpuqbx5D1R/exec")
+// ================================
+// 📦 BUSCAR PRODUTOS (GOOGLE SHEETS API)
+// ================================
 
-.then(response => response.json())
+const API_URL = "https://script.google.com/macros/s/AKfycbwZsYYhE2OFDYMjkTrrmRPo0iT6iPEkYj60P_VhEzWyMv55rujTGn0IxHFpuqbx5D1R/exec";
 
-.then(produtos => {
+document.addEventListener("DOMContentLoaded", () => {
+  carregarProdutos();
+});
 
+async function carregarProdutos() {
+  try {
+    const response = await fetch(API_URL);
+    const produtos = await response.json();
+
+    atualizarCards(produtos);
+
+  } catch (error) {
+    console.error("Erro ao carregar produtos:", error);
+  }
+}
+
+// ================================
+// 🧠 ATUALIZAR CARDS NA TELA
+// ================================
+
+function atualizarCards(produtos) {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
+    const nomeEl = card.querySelector("h3");
+    const precoEl = card.querySelector(".card-meta");
+    const botao = card.querySelector(".btn-add");
 
-    const nome = card.querySelector("h3").innerText.trim();
+    if (!nomeEl || !precoEl) return;
 
-    const produtoAPI = produtos.find(p => p.produto.trim() === nome);
+    const nome = nomeEl.innerText.trim();
 
-    if(produtoAPI){
+    const produtoAPI = produtos.find(
+      p => p.produto?.trim().toLowerCase() === nome.toLowerCase()
+    );
 
-      const preco = card.querySelector(".card-meta");
+    if (!produtoAPI) return;
 
-      preco.innerText = "R$ " + Number(produtoAPI.preco).toFixed(2).replace(".", ",");
+    // Atualiza preço na tela
+    const precoFormatado = formatarPreco(produtoAPI.preco);
+    precoEl.innerText = precoFormatado;
 
-      const botao = card.querySelector(".btn-add");
-
-      if(botao){
-        botao.dataset.preco = produtoAPI.preco;
-      }
-
+    // Atualiza preço do botão (carrinho)
+    if (botao) {
+      botao.dataset.preco = produtoAPI.preco;
     }
-
   });
+}
 
-});
+// ================================
+// 💰 FORMATAR PREÇO (PADRÃO BR)
+// ================================
+
+function formatarPreco(valor) {
+  return "R$ " + Number(valor).toFixed(2).replace(".", ",");
+}

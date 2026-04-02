@@ -1,95 +1,98 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pães Caseiros — Valdino Bolos Caseiros</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="tema-paes ">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="logo Valdino" class="logo" />
-      </a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-     <nav class="nav" id="nav">
-        <a href="index.html">Início</a>
-        <a href="cardapio.html">Cardápio</a>
-      </nav>
-       <a href="carrinho.html" class="cart-icon" id="header-cart">
-  🛒 <span id="cart-count">0</span>
-</a>
+    <title>Pães Caseiros — Valdino Bolos Caseiros</title>
 
-       <button class="hamburger" id="hamburger" aria-label="paes">
-        &#9776;
-      </button>
-    </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  </header>
+  <body class="tema-paes">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <img src="images/logo.png" alt="Valdino Bolos Caseiros" class="logo" />
+        </a>
 
-  <main class="container">
-    <section class="page-head">
-      <h1>Pães Caseiros</h1>
-      <p>Os Pães da Valdino Bolos Caseiros são puro amor e com massa bem leve.</p>
-    </section>
+        <nav class="nav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="cardapio.html">Cardápio</a>
+        </nav>
 
-    <section class="grid grid-3 products" id="produtos">
-      <article class="card">
-        <img src="images/pão-caseiro.jpg" alt="Pão Caseiro" />
-        <div class="card-body">
-          <h3>Pão Caseiro</h3>
-          <div class="card-meta preco-produto" data-produto="Pão Caseiro">R$ 18,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Pão Caseiro" 
-            data-preco="18.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+        <a href="carrinho.html" class="cart-icon" id="header-cart">
+          🛒 <span id="cart-count">0</span>
+        </a>
 
-      <article class="card">
-        <img src="images/Pão Milho.jpg" alt="Pão de Milho" />
-        <div class="card-body">
-          <h3>Pão de Milho</h3>
-         <div class="card-meta preco-produto" data-produto="Pão de Milho">R$ 25,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Pão de Milho" 
-            data-preco="25.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
-    </section>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </header>
 
-  
+    <!-- MAIN -->
+    <main class="container">
+      <!-- TÍTULO -->
+      <section class="page-head">
+        <h1>Pães Caseiros</h1>
+        <p>
+          Os pães da Valdino Bolos Caseiros são puro amor, com massa leve e sabor caseiro.
+        </p>
+      </section>
 
-  </main>
+      <!-- PRODUTOS -->
+      <section class="grid grid-3 products" id="produtos">
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year-paes"></span> Valdino Bolos Caseiros</p>
-    </div>
-  </footer>
-  
-  <!-- 🔔 TOAST NOTIFICAÇÃO -->
-<div id="toast" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #333;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: none;
-  z-index: 999;
-  font-weight: bold;
-">
-</div>
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/pão-caseiro.jpg" alt="Pão Caseiro" />
 
-  <script src="script.js"></script>
-   <script src="produtos.js"></script>
-</body>
+          <div class="card-body">
+            <h3>Pão Caseiro</h3>
+
+            <div class="card-meta">R$ 18,00</div>
+
+            <button class="btn btn-small btn-add"
+              data-produto="Pão Caseiro"
+              data-preco="18.00">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/Pão Milho.jpg" alt="Pão de Milho" />
+
+          <div class="card-body">
+            <h3>Pão de Milho</h3>
+
+            <div class="card-meta">R$ 25,00</div>
+
+            <button class="btn btn-small btn-add"
+              data-produto="Pão de Milho"
+              data-preco="25.00">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year-paes"></span> Valdino Bolos Caseiros</p>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+    <script src="produtos.js"></script>
+  </body>
 </html>

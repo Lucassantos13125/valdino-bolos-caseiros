@@ -77,11 +77,13 @@ document.querySelectorAll(".nav a").forEach(link => {
   });
 });
 
-document.addEventListener("click", (e) => {
-  if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-    nav.classList.remove("active");
-  }
-});
+if (nav && hamburger) {
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove("active");
+    }
+  });
+}
 
 
   // anos no footer
@@ -98,18 +100,23 @@ document.addEventListener("click", (e) => {
     localStorage.setItem("carrinho", JSON.stringify(cart));
   }
 
-      // 🔔 Toast de notificação
+     // 🔔 Toast de notificação (VERSÃO NOVA)
 function showToast(msg = "Produto adicionado ao carrinho!") {
   const toast = document.getElementById("toast");
   if (!toast) return;
 
-  toast.innerText = msg;
-  toast.style.display = "block";
+  // limpa timeout anterior (evita bug de spam)
+  if (toast.timeoutId) {
+    clearTimeout(toast.timeoutId);
+  }
 
-  setTimeout(() => {
-    toast.style.display = "none";
-  }, 2000);
-}   
+  toast.textContent = msg;
+  toast.classList.add("show");
+
+  toast.timeoutId = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+}
   
   // Contador do carrinho no header
   function atualizarContador() {
@@ -142,11 +149,17 @@ function showToast(msg = "Produto adicionado ao carrinho!") {
     atualizarCarrinho();
     atualizarContador();
     showToast(`🔥 ${produto} foi pro carrinho!`);
+    animarCarrinho();
   }
 
   // Botões adicionar
   document.querySelectorAll(".btn-add").forEach(btn => {
     btn.addEventListener("click", () => {
+  btn.classList.add("clicked");
+
+  setTimeout(() => {
+    btn.classList.remove("clicked");
+  }, 150);
       const produto = btn.getAttribute("data-produto");
       const preco = parseFloat(btn.getAttribute("data-preco"));
       if (!produto || isNaN(preco)) return;
@@ -229,6 +242,22 @@ function showToast(msg = "Produto adicionado ao carrinho!") {
     const d = apenasDigitos(tel);
     return d.length >= 8 && d.length <= 13;
   }
+function animarCarrinho() {
+  const cartIcon = document.getElementById("header-cart");
+  const count = document.getElementById("cart-count");
+
+  if (cartIcon) {
+    cartIcon.classList.remove("bump");
+    void cartIcon.offsetWidth; // força reflow
+    cartIcon.classList.add("bump");
+  }
+
+  if (count) {
+    count.classList.remove("bump");
+    void count.offsetWidth;
+    count.classList.add("bump");
+  }
+}
 
   // Finalizar pedido (AGORA INCLUINDO DADOS DO CLIENTE)
 if (btnFinalizar) {
@@ -262,6 +291,9 @@ if (btnFinalizar) {
     cart = [];
     saveCart();
     atualizarCarrinho();
+    atualizarContador();
+
+    showToast("Pedido enviado com sucesso 🚀");
   });
 }
 

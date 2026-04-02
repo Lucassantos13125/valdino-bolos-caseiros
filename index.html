@@ -1,116 +1,166 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Valdino Bolos Caseiros</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Valdino Bolos Caseiros — sabor de tradição. Peça pelo WhatsApp!" />
-</head>
-<body class="tema-home">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Valdino Bolos Caseiros — logo" class="logo" />
-      </a>
-      <nav class="nav" id="nav">
-        <a href="index.html">Início</a>
-        <a href="cardapio.html">Cardápio</a>
-      </nav>
-      
-      
-    <a href="carrinho.html" class="cart-icon" id="header-cart">
-  🛒 <span id="cart-count">0</span>
-</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Valdino Bolos Caseiros</title>
 
+    <link rel="stylesheet" href="styles.css" />
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
-    </div>
-  </header>
+    <meta
+      name="description"
+      content="Valdino Bolos Caseiros — sabor de tradição. Peça pelo WhatsApp!"
+    />
+  </head>
 
-  <main>
-    <section class="hero">
-        <article class="card">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Valdino Bolos Caseiros</h1>
-          <p class="lead">Pedidos apenas por encomenda.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" id="hero-whats">Peça pelo WhatsApp</a>
-            <a class="btn btn-outline" href="cardapio.html">Ver Cardápio</a>
+  <body class="tema-home">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <img
+            src="images/logo.png"
+            alt="Valdino Bolos Caseiros — logo"
+            class="logo"
+          />
+        </a>
+
+        <nav class="nav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="cardapio.html">Cardápio</a>
+        </nav>
+
+        <a href="carrinho.html" class="cart-icon" id="header-cart">
+          🛒 <span id="cart-count">0</span>
+        </a>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Menu"
+        >
+          &#9776;
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Valdino Bolos Caseiros</h1>
+            <p class="lead">Pedidos apenas por encomenda.</p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" id="hero-whats">
+                Peça pelo WhatsApp
+              </a>
+
+              <a class="btn btn-outline" href="cardapio.html">
+                Ver Cardápio
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img
+              src="images/placeholder-hero.jpg"
+              alt="Bolo caseiro delicioso"
+            />
           </div>
         </div>
-        <div class="hero-image">
-          <img src="images/placeholder-hero.jpg" alt="Bolo caseiro delicioso" />
+      </section>
+
+      <!-- DESTAQUES -->
+      <section class="showcase container">
+        <h2>Nossos Destaques</h2>
+
+        <div class="grid grid-3">
+          <!-- PRODUTO 1 -->
+          <article class="card">
+            <img
+              src="images/Bolo-cenoura-cobertura.jpg"
+              alt="Bolo de Cenoura"
+            />
+
+            <div class="card-body">
+              <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+              <div class="card-meta">R$ 40,00</div>
+
+              <button
+                class="btn btn-small btn-add"
+                data-produto="Bolo de Cenoura com Chocolate"
+                data-preco="40.00"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUTO 2 -->
+          <article class="card">
+            <img src="images/torta.jpg" alt="Torta de Frango" />
+
+            <div class="card-body">
+              <h3>Torta de Frango - Individual</h3>
+              <div class="card-meta">R$ 12,00</div>
+
+              <button
+                class="btn btn-small btn-add"
+                data-produto="Torta de Frango"
+                data-preco="12.00"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </article>
+
+          <!-- PRODUTO 3 -->
+          <article class="card">
+            <img src="images/pão-caseiro.jpg" alt="Pão Caseiro" />
+
+            <div class="card-body">
+              <h3>Pão Caseiro - Tradicional</h3>
+              <div class="card-meta">R$ 18,00</div>
+
+              <button
+                class="btn btn-small btn-add"
+                data-produto="Pão Caseiro"
+                data-preco="18.00"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </article>
         </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section id="sobre" class="about container">
+        <h2>Um pouco sobre a Valdino Bolos Caseiros</h2>
+
+        <p>
+          Desde 2022 nós da Valdino Bolos Caseiros levamos tradição,
+          ingredientes de qualidade e aquele toque de família ao seu pedaço
+          de bolo. Produzido artesanalmente e com muito carinho.
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year"></span> Valdino Bolos Caseiros — Feito com carinho.
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <section class="showcase container">
-      <div class="more-link">
-      </div>
-      <article class="card">
-      <h2>Nossos Destaques</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <img src="images/Bolo-cenoura-cobertura.jpg" alt="Bolo Fazenda" />
-          <div class="card-body">
-            <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
-            <div class="card-meta">R$ 40,00</div>
-            <button class="btn btn-small btn-add" data-produto="Bolo De Cenoura com Chocolate" data-preco="40.00">Adicionar ao Carrinho</button>
-          </div>
-        </article>
+    <!-- TOAST -->
+    <div id="toast"></div>
 
-        <article class="card">
-          <img src="images/torta.jpg" alt="Torta" />
-          <div class="card-body">
-            <h3>Torta de Frango-Individual</h3>
-            <div class="card-meta">R$ 12,00</div>
-            <button class="btn btn-small btn-add" data-produto="Torta de Frango" data-preco="12.00">Adicionar ao Carrinho</button>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/pão-caseiro.jpg" alt="Pão Caseiro" />
-          <div class="card-body">
-            <h3>Pão Caseiro - Tradicional</h3>
-            <div class="card-meta">R$ 18,00</div>
-            <button class="btn btn-small btn-add" data-produto="Pão Caseiro" data-preco="18.00">Adicionar ao Carrinho</button>
-          </div>
-        </article>
-      </div>
-      <article class="card">
-      <div class="more-link">
-      </div>
-    </section>
-
-    <section id="sobre" class="about container">
-      <h2>Um pouco sobre a Valdino Bolos Caseiros</h2>
-      <p>Desde 2022 nós da Valdino Bolos Caseiros levamos tradição, ingredientes de qualidade e aquele toque de família ao seu pedaço de bolo. Produzido artesanalmente e com muito carinho.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Valdino Bolos Caseiros — Feito com carinho.</p>
-    </div>
-  </footer>
-
-  <!-- 🔔 TOAST NOTIFICAÇÃO -->
-<div id="toast" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #333;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: none;
-  z-index: 999;
-  font-weight: bold;
-">
-</div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

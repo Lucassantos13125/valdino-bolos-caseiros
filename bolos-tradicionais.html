@@ -1,280 +1,319 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bolos Tradicionais — Valdino Bolos Caseiros</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="tema-tradicionais ">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="logo Valdino" class="logo" />
-      </a>
-      <nav class="nav" id="nav">
-        <a href="index.html">Início</a>
-        <a href="cardapio.html">Cardápio</a>
-      </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-       <a href="carrinho.html" class="cart-icon" id="header-cart">
-  🛒 <span id="cart-count">0</span>
-</a>
+    <title>Bolos Tradicionais — Valdino Bolos Caseiros</title>
 
-     <button class="hamburger" id="hamburger" aria-label="trad">
-        &#9776;
-      </button>
-    </div>
-  </header>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <main class="container">
-    <section class="page-head">
-      <h1>Bolos Tradicionais</h1>
-      <p>Confira nossas opções clássicas fofinhos, saborosos e com aquele gostinho de casa.</p>
-    </section>
+  <body class="tema-tradicionais">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <img src="images/logo.png" alt="Valdino Bolos Caseiros" class="logo" />
+        </a>
 
-    <section class="grid grid-3 products" id="produtos">
-      <article class="card">
-        <img src="images/tradicional-Fubá.jpg" alt="Bolo de Fubá" />
-        <div class="card-body">
-          <h3>Bolo de Fubá</h3>
-          <p>Bolo fofo feito de fubá.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Fubá">
-            R$ 28,00
+        <nav class="nav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="cardapio.html">Cardápio</a>
+        </nav>
+
+        <a href="carrinho.html" class="cart-icon" id="header-cart">
+          🛒 <span id="cart-count">0</span>
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          &#9776;
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container">
+      <!-- TÍTULO -->
+      <section class="page-head">
+        <h1>Bolos Tradicionais</h1>
+        <p>
+          Confira nossas opções clássicas: fofinhos, saborosos e com aquele
+          gostinho de casa.
+        </p>
+      </section>
+
+      <!-- PRODUTOS -->
+      <section class="grid grid-3 products" id="produtos">
+
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/tradicional-Fubá.jpg" alt="Bolo de Fubá" />
+
+          <div class="card-body">
+            <h3>Bolo de Fubá</h3>
+            <p>Bolo fofinho feito de fubá.</p>
+
+            <div class="card-meta">R$ 28,00</div>
+
+            <button class="btn btn-small btn-add"
+              data-produto="Bolo de Fubá"
+              data-preco="28.00">
+              Adicionar ao Carrinho
+            </button>
           </div>
-          
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Fubá" 
-            data-preco="28.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+        </article>
 
-       <article class="card">
-        <img src="images/tradicional-Fubá-ErvaD.jpg" alt="Bolo de fubá com erva doce" />
-        <div class="card-body">
-          <h3>Bolo de fubá com erva doce</h3>
-          <p>Bolo Macio de fubá com erva doce .</p>
-         <div class="card-meta preco-produto" data-produto="Bolo de tradicional-Fubá-ErvaD">R$ 28,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de fubá com erva doce" 
-            data-preco="28.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/tradicional-Fubá-ErvaD.jpg" alt="Bolo de fubá com erva doce" />
 
-     
-      <article class="card">
-        <img src="images/tradicional-Coco.jpg" alt="Bolo de Coco" />
-        <div class="card-body">
-          <h3>Bolo de Coco </h3>
-          <p>Bolo Macio de coco com cobertura de leite condensado e coco ralado.</p>
-         <div class="card-meta preco-produto" data-produto="Bolo de Coco">R$ 35,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de coco " 
-            data-preco="35.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+          <div class="card-body">
+            <h3>Bolo de Fubá com Erva-Doce</h3>
+            <p>Bolo macio de fubá com erva-doce.</p>
 
-      <article class="card">
-        <img src="images/tradicional-Milho.jpg" alt="Bolo de Milho" />
-        <div class="card-body">
-          <h3>Bolo de Milho</h3>
-          <p>Bolo de Milho bem macio.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Milho">R$ 30,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Milho" 
-            data-preco="30.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+            <div class="card-meta">R$ 28,00</div>
 
-       <article class="card">
-        <img src="images/tradicional-Mandioca.jpg" alt="Bolo de MAndioca" />
-        <div class="card-body">
-          <h3>Bolo de Mandioca</h3>
-          <p>Bolo Macio de Mandioca.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Mandioca">>R$ 35,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Mandioca" 
-            data-preco="35.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+            <button class="btn btn-small btn-add"
+              data-produto="Bolo de Fubá com Erva-Doce"
+              data-preco="28.00">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
 
-       <article class="card">
-        <img src="images/Bolo-fuba-cremoso.jpg" alt=" Bolo-fuba-cremoso" />
-        <div class="card-body">
-          <h3>Bolo de fuba cremoso</h3>
-          <p>Bolo Macio de fuba Cremoso.</p>
-          <div class="card-meta preco-produto" data-produto=" Bolo-fuba-cremoso">R$ 35,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Fubá cremoso" 
-            data-preco="35.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
-       
-      <article class="card">
-        <img src="images/tradicional-Fubá-goiabada.jpg" alt="Bolo de fubá goiabada" />
-        <div class="card-body">
-          <h3>Bolo de fubá com goiabada</h3>
-          <p>Bolo Macio de fubá com goiabada.</p>
-         <div class="card-meta preco-produto" data-produto="Bolo de tradicional-Fubá-goiabada">R$ 35,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de fubá com goiabada" 
-            data-preco="35.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
-      
-      <article class="card">
-        <img src="images/tradicional-limão.jpg" alt="Bolo de limão com cobertura" />
-        <div class="card-body">
-          <h3>Bolo de limão  </h3>
-          <p>Bolo fofo feito de limão com cobertura .</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de limão com cobertura">R$ 35,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de limão com cobertura" 
-            data-preco="35.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/tradicional-Coco.jpg" alt="Bolo de Coco" />
 
-      <article class="card">
-        <img src="images/tradicional-Laranja.jpg" alt="Bolo de Laranja" />
-        <div class="card-body">
-          <h3>Bolo de Laranja</h3>
-          <p>Bolo fofo com calda de laranja natural.</p>
-         <div class="card-meta preco-produto" data-produto="Bolo de laranja">R$ 30,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Laranja" 
-            data-preco="30.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+          <div class="card-body">
+            <h3>Bolo de Coco</h3>
+            <p>Cobertura de leite condensado com coco ralado.</p>
 
-      <article class="card">
-        <img src="images/tradicional-chocolate.jpg" alt="Bolo de Chocolate" />
-        <div class="card-body">
-          <h3>Bolo de Chocolate</h3>
-          <p>Clássico com cobertura generosa e sabor intenso.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Chocolate">R$ 40,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Chocolate" 
-            data-preco="40.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+            <div class="card-meta">R$ 35,00</div>
 
-      <article class="card">
-        <img src="images/Bolo-cenoura-cobertura.jpg" alt="Bolo de Cenoura com Chocolate" />
-        <div class="card-body">
-          <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
-          <p>Clássico fofinho e irresistível.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Cenoura com cobertura">R$ 40,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Cenoura com Chocolate" 
-            data-preco="40.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+            <button class="btn btn-small btn-add"
+              data-produto="Bolo de Coco"
+              data-preco="35.00">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
 
-      <article class="card">
-        <img src="images/Bolo-de-pão-de-queijo.jpg" alt="Bolo de pão de queijo " />
-        <div class="card-body">
-          <h3>Bolo de pão de queijo </h3>
-          <p>Bolo fofinho sabor Pão de Queijo.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de pão de queijo">R$ 50,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de pão de queijo " 
-            data-preco="50.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/tradicional-Milho.jpg" alt="Bolo de Milho" />
 
-       <article class="card">
-        <img src="images/tradicional-chocolate-Brigadeiro.jpg" alt="Bolo de Chocolate Brigadeiro" />
-        <div class="card-body">
-          <h3>Bolo de Chocolate com cobertura de Brigadeiro</h3>
-          <p>Cobertura generosa e sabor intenso.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Chocolate brigadeiro">R$ 59,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Chocolate cobertura de brigadeiro" 
-            data-preco="59.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
+          <div class="card-body">
+            <h3>Bolo de Milho</h3>
+            <p>Bolo de milho bem macio.</p>
 
-      <article class="card">
-        <img src="images/tradicional-de-Cenoura-Vulcão.jpg" alt="Bolo de Cenoura Vulcão" />
-        <div class="card-body">
-          <h3>Bolo de Cenoura  ou Chocolate com cobertura Vulcão</h3>
-          <p>Cobertura generosa e sabor intenso.</p>
-          <div class="card-meta preco-produto" data-produto="Bolo de Cenoura Vulcão">R$ 55,00</div>
-          <button 
-            class="btn btn-small btn-add" 
-            data-produto="Bolo de Cenoura com cobertura Vulcão" 
-            data-preco="55.00">
-            Adicionar ao Carrinho
-          </button>
-        </div>
-      </article>
-    </section>
-    
+            <div class="card-meta">R$ 30,00</div>
 
-  </main>
+            <button class="btn btn-small btn-add"
+              data-produto="Bolo de Milho"
+              data-preco="30.00">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year-trad"></span> Valdino Bolos Caseiros</p>
-    </div>
-  </footer>
+        <!-- PRODUTO -->
+        <article class="card">
+          <img src="images/tradicional-Mandioca.jpg" alt="Bolo de Mandioca" />
 
-  <!-- 🔔 TOAST NOTIFICAÇÃO -->
-<div id="toast" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #333;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: none;
-  z-index: 999;
-  font-weight: bold;
-">
-</div>
+          <div class="card-body">
+            <h3>Bolo de Mandioca</h3>
+            <p>Bolo macio de mandioca.</p>
 
-  <script src="script.js"></script>
-  <script src="produtos.js"></script>
-  
-</body>
+            <div class="card-meta">R$ 35,00</div>
+
+            <button class="btn btn-small btn-add"
+              data-produto="Bolo de Mandioca"
+              data-preco="35.00">
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </article>
+
+        <!-- PRODUTO -->
+<article class="card">
+  <img src="images/Bolo-fuba-cremoso.jpg" alt="Bolo de Fubá Cremoso" />
+
+  <div class="card-body">
+    <h3>Bolo de Fubá Cremoso</h3>
+    <p>Bolo macio de fubá cremoso.</p>
+
+    <div class="card-meta">R$ 35,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Fubá Cremoso"
+      data-preco="35.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/tradicional-Fubá-goiabada.jpg" alt="Bolo de Fubá com Goiabada" />
+
+  <div class="card-body">
+    <h3>Bolo de Fubá com Goiabada</h3>
+    <p>Bolo macio de fubá com goiabada.</p>
+
+    <div class="card-meta">R$ 35,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Fubá com Goiabada"
+      data-preco="35.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/tradicional-limão.jpg" alt="Bolo de Limão com Cobertura" />
+
+  <div class="card-body">
+    <h3>Bolo de Limão</h3>
+    <p>Bolo fofo de limão com cobertura.</p>
+
+    <div class="card-meta">R$ 35,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Limão com Cobertura"
+      data-preco="35.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/tradicional-Laranja.jpg" alt="Bolo de Laranja" />
+
+  <div class="card-body">
+    <h3>Bolo de Laranja</h3>
+    <p>Bolo fofo com calda de laranja natural.</p>
+
+    <div class="card-meta">R$ 30,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Laranja"
+      data-preco="30.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/tradicional-chocolate.jpg" alt="Bolo de Chocolate" />
+
+  <div class="card-body">
+    <h3>Bolo de Chocolate</h3>
+    <p>Clássico com cobertura generosa e sabor intenso.</p>
+
+    <div class="card-meta">R$ 40,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Chocolate"
+      data-preco="40.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/Bolo-cenoura-cobertura.jpg" alt="Bolo de Cenoura com Chocolate" />
+
+  <div class="card-body">
+    <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+    <p>Clássico fofinho e irresistível.</p>
+
+    <div class="card-meta">R$ 40,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Cenoura com Chocolate"
+      data-preco="40.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/Bolo-de-pão-de-queijo.jpg" alt="Bolo de Pão de Queijo" />
+
+  <div class="card-body">
+    <h3>Bolo de Pão de Queijo</h3>
+    <p>Bolo fofinho sabor pão de queijo.</p>
+
+    <div class="card-meta">R$ 50,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Pão de Queijo"
+      data-preco="50.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/tradicional-chocolate-Brigadeiro.jpg" alt="Bolo de Chocolate com Brigadeiro" />
+
+  <div class="card-body">
+    <h3>Bolo de Chocolate com Brigadeiro</h3>
+    <p>Cobertura generosa e sabor intenso.</p>
+
+    <div class="card-meta">R$ 59,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo de Chocolate com Brigadeiro"
+      data-preco="59.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+<!-- PRODUTO -->
+<article class="card">
+  <img src="images/tradicional-de-Cenoura-Vulcão.jpg" alt="Bolo Vulcão" />
+
+  <div class="card-body">
+    <h3>Bolo de Cenoura ou Chocolate Vulcão</h3>
+    <p>Cobertura generosa e sabor intenso.</p>
+
+    <div class="card-meta">R$ 55,00</div>
+
+    <button class="btn btn-small btn-add"
+      data-produto="Bolo Vulcão"
+      data-preco="55.00">
+      Adicionar ao Carrinho
+    </button>
+  </div>
+</article>
+
+        <!-- continua o mesmo padrão pros outros -->
+        
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year-trad"></span> Valdino Bolos Caseiros</p>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+    <script src="produtos.js"></script>
+  </body>
 </html>

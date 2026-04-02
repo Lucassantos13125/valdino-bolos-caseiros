@@ -1,98 +1,124 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cardápio — Valdino Bolos Caseiros</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="tema-cardapio ">
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Valdino Bolos Caseiros — logo" class="logo" />
-      </a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-      <nav class="nav" id="nav">
-        <a href="index.html">Início</a>
-        <a href="cardapio.html">Cardápio</a>
-      </nav>
-       
-       <a href="carrinho.html" class="cart-icon" id="header-cart">
-           🛒 <span id="cart-count">0</span>
-      </a>
+    <title>Cardápio — Valdino Bolos Caseiros</title>
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        &#9776;
-      </button>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-    </div>
-  </header>
+  <body class="tema-cardapio">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <img
+            src="images/logo.png"
+            alt="Valdino Bolos Caseiros — logo"
+            class="logo"
+          />
+        </a>
 
-  <main class="container">
-    <section class="page-head">
-      <h1>Cardápio</h1>
-      <p>Escolha a categoria e veja nossos Produtos.</p>
-    </section>
+        <nav class="nav" id="nav">
+          <a href="index.html">Início</a>
+          <a href="cardapio.html">Cardápio</a>
+        </nav>
 
-    <section class="categories grid grid-3">
+        <a href="carrinho.html" class="cart-icon" id="header-cart">
+          🛒 <span id="cart-count">0</span>
+        </a>
 
-  <!-- Bolos Tradicionais -->
-  <div class="category-card">
-    <article class="card">
-      <a href="bolos-tradicionais.html" class="img-link">
-        <img src="images/Bolos-tradicionais.jpg" alt="Bolos Tradicionais" />
-      </a>
-      <h3>Bolos Tradicionais</h3>
-      <p>Mais que um doce, uma experiência de conforto. Permita-se saborear a simplicidade perfeita dos nossos bolos caseiros.</p>
-    </article>
-  </div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Menu"
+        >
+          &#9776;
+        </button>
+      </div>
+    </header>
 
+    <!-- MAIN -->
+    <main class="container">
+      <!-- TÍTULO -->
+      <section class="page-head">
+        <h1>Cardápio</h1>
+        <p>Escolha a categoria e veja nossos produtos.</p>
+      </section>
 
-  <!-- Tortas -->
-  <div class="category-card">
-    <article class="card">
-      <a href="tortas.html" class="img-link">
-        <img src="images/torta.jpg" alt="Tortas" />
-      </a>
-      <h3>Torta de Frango </h3>
-      <p>Sabor de verdade em cada pedaço. Seja para o almoço ou para o café, temos a torta ideal para tornar seu dia especial.</p>
-    </article>
-  </div>
+      <!-- CATEGORIAS -->
+      <section class="categories grid grid-3">
+        <!-- Bolos Tradicionais -->
+        <article class="card category-card">
+          <a href="bolos-tradicionais.html" class="img-link">
+            <img
+              src="images/Bolos-tradicionais.jpg"
+              alt="Bolos Tradicionais"
+            />
+          </a>
 
+          <div class="card-body">
+            <h3>Bolos Tradicionais</h3>
+            <p>
+              Mais que um doce, uma experiência de conforto. Permita-se
+              saborear a simplicidade perfeita dos nossos bolos caseiros.
+            </p>
+          </div>
+        </article>
 
-  <!-- Brownie -->
-  <div class="category-card">
-    <article class="card">
-      <a href="brownies.html" class="img-link">
-        <img src="images/Brownie.jpg" alt="Brownie" />
-      </a>
-      <h3>Brownie</h3>
-      <p>A dose de felicidade que você merece. Escolha entre nossos brownies individuais ou o Bolo de Brownie no tamanho ideal para sua celebração.</p>
-    </article>
-  </div>
+        <!-- Tortas -->
+        <article class="card category-card">
+          <a href="tortas.html" class="img-link">
+            <img src="images/torta.jpg" alt="Tortas" />
+          </a>
 
+          <div class="card-body">
+            <h3>Torta de Frango</h3>
+            <p>
+              Sabor de verdade em cada pedaço. Seja para o almoço ou para o
+              café, temos a torta ideal para tornar seu dia especial.
+            </p>
+          </div>
+        </article>
 
-  <!-- Pães Caseiros (corrigido) -->
-  <div class="category-card">
-    <article class="card">
-      <a href="paes.html" class="img-link">
-        <img src="images/pao-caseiro.jpg" alt="Pães Caseiros" />
-      </a>
-      <h3>Pães Caseiros</h3>
-      <p>Receitas de família, sabor de infância. Escolha o clássico que conforta ou o de milho que surpreende, sempre quentinhos e frescos.</p>
-    </article>
-  </div>
+        <!-- Brownie -->
+        <article class="card category-card">
+          <a href="brownies.html" class="img-link">
+            <img src="images/Brownie.jpg" alt="Brownie" />
+          </a>
 
-</section>
+          <div class="card-body">
+            <h3>Brownie</h3>
+            <p>
+              A dose de felicidade que você merece. Escolha entre nossos
+              brownies individuais ou o bolo de brownie ideal para sua
+              celebração.
+            </p>
+          </div>
+        </article>
 
+        <!-- Pães Caseiros -->
+        <article class="card category-card">
+          <a href="paes.html" class="img-link">
+            <img
+              src="images/pao-caseiro.jpg"
+              alt="Pães Caseiros"
+            />
+          </a>
 
-</main>
+          <div class="card-body">
+            <h3>Pães Caseiros</h3>
+            <p>
+              Receitas de família, sabor de infância. Escolha o clássico que
+              conforta ou o de milho que surpreende, sempre fresquinhos.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
 
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
-
