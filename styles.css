@@ -125,24 +125,20 @@ html, body {
 .hero-text h1 { 
   font-size: 46px; 
   margin: 0; 
-  color: var(--highlight-color); 
+  color: #1b3a1b;
+  text-shadow: none;
+}
 
-  text-shadow:
-    0 0 5px rgba(0,255,136,0.8),
-    0 0 10px rgba(0,255,136,0.6),
-    0 0 20px rgba(0,255,136,0.4);
+.tema-home .hero-text h1 {
+  color: #1b3a1b;
 }
 
 .lead { 
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000; /* texto preto */
+  font-size: 32px;
+  font-weight: 600;
+  color: #f8f8f8f8;
 
-  /* efeito neon escuro */
-  text-shadow:
-    0 0 4px rgba(0, 255, 136, 0.4),
-    0 0 8px rgba(0, 255, 136, 0.3),
-    0 0 12px rgba(0, 255, 136, 0.2);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* sombra leve pra destacar */
 }
 
 .hero-image img { 
@@ -514,4 +510,8 @@ html, body {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+}
+
+.tema-home .hero-text h1 {
+  color: rgba(59, 207, 10, 0.614) ;
 }
