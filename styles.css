@@ -1,13 +1,13 @@
 /* =========================
    🔧 VARIÁVEIS GLOBAIS
    ========================= */
-:root {
+ :root {
   /* Cores base do site */
   --color-primary: #315b1c;
   --color-secondary: #6e9c57;
   --color-bg: #9de79d;
   --color-text: #151518;
-  --color-white: #f5f5f5;
+  --color-white: #e3e3e3;
   --color-muted: #262222;
 
   /* Layout */
@@ -29,7 +29,7 @@
 .tema-home {
   --highlight-color: #394e2e;
   --color-text: #0f0f0f;
-  --color-white: #ffffff;
+  --color-white: #fafafa;
 }
 
 /* Página de produtos */
@@ -483,8 +483,8 @@ html, body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #333;
-  color: #fff;
+  background: #767676;
+  color: #f3f3f3;
   padding: 12px 20px;
   border-radius: 8px;
   z-index: 999;
@@ -509,9 +509,9 @@ html, body {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #f0eeee;
 }
 
 .tema-home .hero-text h1 {
-  color: rgba(59, 207, 10, 0.614) ;
+  color: rgb(255, 255, 255) ;
 }
